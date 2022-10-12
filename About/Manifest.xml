@@ -17,5 +17,5 @@
   <!-- </suggests> -->
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/OrionFive/Therapy/master/About/Manifest.xml</manifestUri>
-  <downloadUri>https://github.com/OrionFive/Therapy/releases</downloadUri>
+  <downloadUri>https://github.com/OrionFive/Therapy/tags</downloadUri>
 </Manifest>
