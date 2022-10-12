@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\Therapy\Source\.idea</exclude>
+    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\Therapy\Source\.vs</exclude>
+    <exclude>E:\Spiele\Steam\steamapps\common\RimWorld\Mods\Therapy\Source\Source\obj</exclude>
+  </Excluded>
+</Configuration>
