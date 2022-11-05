@@ -17,7 +17,7 @@ namespace Therapy
             var building = patient.Position.GetEdifice(pawn.Map);
             if (!(building is Building_Couch couch)) return false;
 
-            if(patient == null || patient == pawn || patient.Dead || patient.Downed || patient.InMentalState) return false;
+            if(patient == pawn || patient.Dead || patient.Downed || patient.InMentalState) return false;
             if(!pawn.CanReserve(patient, 1, -1, null, forced)) return false;
 
             couch.TryFindChairNearCouch(out var chair);

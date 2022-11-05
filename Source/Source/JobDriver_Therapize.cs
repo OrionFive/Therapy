@@ -8,7 +8,7 @@ namespace Therapy
 {
     public class JobDriver_Therapize : JobDriver
     {
-        public static readonly SimpleCurve BeautyEffectCurve = new SimpleCurve
+        public static readonly SimpleCurve beautyEffectCurve = new SimpleCurve
         {
             new CurvePoint(0f, 0f),
             new CurvePoint(0.1f, 0.15f),
@@ -123,7 +123,7 @@ namespace Therapy
             // Higher when neutral, then tapering off
             float indexBeauty = RoomStatDefOf.Beauty.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Beauty));
             var count = RoomStatDefOf.Beauty.scoreStages.Count;
-            return BeautyEffectCurve.Evaluate(indexBeauty / count);
+            return beautyEffectCurve.Evaluate(indexBeauty / count);
         }
 
         private void ShowInteractionBubble(Pawn patient)

@@ -62,7 +62,7 @@ namespace Therapy
                 // Stay
                 if (!pawn.Drafted && !lookForOtherJobs)
                 {
-                    pawn.jobs.jobQueue.EnqueueFirst(new Job(MainUtility.patientJobDef, pawn.CurJob.GetTarget(index)), null);
+                    pawn.jobs.jobQueue.EnqueueFirst(new Job(MainUtility.patientJobDef, pawn.CurJob.GetTarget(index)));
                 }
             });
         }
@@ -136,7 +136,7 @@ namespace Therapy
 
         private void MoodBoost(int amount)
         {
-            if (thoughtDefRelieved == null) thoughtDefRelieved = ThoughtDef.Named("TherapyRelieved");
+            thoughtDefRelieved ??= ThoughtDef.Named("TherapyRelieved");
 
             var thoughtMemory = (Thought_Memory) ThoughtMaker.MakeThought(thoughtDefRelieved);
             thoughtMemory.moodPowerFactor = 0;

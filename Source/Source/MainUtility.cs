@@ -10,9 +10,9 @@ namespace Therapy
     internal static class MainUtility
     {
         private const float ChairRadius = 3.9f;
-        private static readonly int NumRadiusCells = GenRadial.NumCellsInRadius(ChairRadius);
-        private static readonly List<IntVec3> RadialPatternMiddleOutward =
-            (from c in GenRadial.RadialPattern.Take(NumRadiusCells)
+        private static readonly int numRadiusCells = GenRadial.NumCellsInRadius(ChairRadius);
+        private static readonly List<IntVec3> radialPatternMiddleOutward =
+            (from c in GenRadial.RadialPattern.Take(numRadiusCells)
                 orderby Mathf.Abs((c - IntVec3.Zero).LengthHorizontal - ChairRadius/2)
                 select c).ToList();
 
@@ -22,8 +22,8 @@ namespace Therapy
         public static readonly ThingDef couchThingDef = DefDatabase<ThingDef>.GetNamed("Couch");
         public static readonly WorkTypeDef therapyWorkTypeDef = DefDatabase<WorkTypeDef>.GetNamed("Therapist");
 
-        private static List<IntVec3> cacheChairCells = new List<IntVec3>();
-        private static Dictionary<int, TherapyNeed> therapyNeedCache = new Dictionary<int, TherapyNeed>();
+        private static readonly List<IntVec3> cacheChairCells = new List<IntVec3>();
+        private static readonly Dictionary<int, TherapyNeed> therapyNeedCache = new Dictionary<int, TherapyNeed>();
 
         private struct TherapyNeed
         {
@@ -39,7 +39,7 @@ namespace Therapy
             Region region = center.GetRegion(map);
             if (region == null) return cacheChairCells;
 
-            foreach (var pos in RadialPatternMiddleOutward)
+            foreach (var pos in radialPatternMiddleOutward)
             {
                 var c = pos + center;
                 if (!c.InBounds(map)) continue;
@@ -74,7 +74,7 @@ namespace Therapy
 
         public static bool TryFindChairNearCouch(this Building_Couch couch, out Thing chair)
         {
-            foreach (var v in RadialPatternMiddleOutward)
+            foreach (var v in radialPatternMiddleOutward)
             {
                 var c = couch.Position + v;
                 if (!c.InBounds(couch.Map)) continue;
@@ -115,7 +115,7 @@ namespace Therapy
         {
             if (couch.IsBurning()) {Log.Message($"{pawn.LabelCap}'s couch is burning."); return true;}
             if (HealthAIUtility.ShouldSeekMedicalRestUrgent(pawn)) {Log.Message($"{pawn.LabelCap} needs medical rest urgently."); return true;}
-            if ((pawn.IsColonist || pawn.IsPrisonerOfColony) && (pawn.CurJob == null || !pawn.CurJob.ignoreForbidden) && !pawn.Downed && couch.IsForbidden(pawn)) {Log.Message($"{pawn.LabelCap}'s couch is forbidden."); return true;}
+            if ((pawn.IsColonist || pawn.IsPrisonerOfColony) && !(pawn.CurJob is { ignoreForbidden: true }) && !pawn.Downed && couch.IsForbidden(pawn)) {Log.Message($"{pawn.LabelCap}'s couch is forbidden."); return true;}
 
             return false;
         }

@@ -10,10 +10,7 @@ namespace Therapy
 
         public override PathEndMode PathEndMode => PathEndMode.InteractionCell;
 
-        public override Danger MaxPathDanger(Pawn pawn)
-        {
-            return Danger.Deadly;
-        }
+        public override Danger MaxPathDanger(Pawn pawn) => Danger.Deadly;
 
         public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {

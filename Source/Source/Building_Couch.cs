@@ -84,7 +84,7 @@ namespace Therapy
 
             if (def.building.bed_humanlike && Faction == Faction.OfPlayer)
             {
-                Command_Action command_Action = new Command_Action
+                var commandAction = new Command_Action
                 {
                     defaultLabel = "CommandThingSetPatientsLabel".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Commands/AssignOwner"),
@@ -92,7 +92,7 @@ namespace Therapy
                     action = delegate { Find.WindowStack.Add(new Dialog_AssignBuildingOwner(CompAssignableToPawn)); },
                     hotKey = KeyBindingDefOf.Misc4
                 };
-                yield return command_Action;
+                yield return commandAction;
             }
         }
     }
