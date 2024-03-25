@@ -4,7 +4,7 @@
   <!--============================== Couch ==============================-->
 	
   <ThingDef ParentName="ArtableFurnitureBase">
-    <defName>Couch</defName>
+    <defName>TherapyCouch</defName>
     <label>therapy couch</label>
     <description>A partially upholstered kind of bench, comfy enough to relax but not to fall asleep.</description>
     <thingClass>Therapy.Building_Couch</thingClass>

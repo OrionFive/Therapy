@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <!-- Couch -->
+  <!-- TherapyCouch -->
 
-  <Couch.label>Therapiecouch</Couch.label>
-  <Couch.description>Eine teilweise gepolsterte Bank, die bequem genug ist, um sich zu entspannen, aber nicht einzuschlafen.</Couch.description>
-  <Blueprint_Couch.label>Therapiecouch (Entwurf)</Blueprint_Couch.label>
-  <Frame_Couch.label>Therapiecouch (im Bau)</Frame_Couch.label>
-  <Frame_Couch.description>Eine teilweise gepolsterte Bank, die bequem genug ist, um sich zu entspannen, aber nicht einzuschlafen.</Frame_Couch.description>
+  <TherapyCouch.label>Therapiecouch</TherapyCouch.label>
+  <TherapyCouch.description>Eine teilweise gepolsterte Bank, die bequem genug ist, um sich zu entspannen, aber nicht einzuschlafen.</TherapyCouch.description>
+  <Blueprint_TherapyCouch.label>Therapiecouch (Entwurf)</Blueprint_TherapyCouch.label>
+  <Frame_TherapyCouch.label>Therapiecouch (im Bau)</Frame_TherapyCouch.label>
+  <Frame_TherapyCouch.description>Eine teilweise gepolsterte Bank, die bequem genug ist, um sich zu entspannen, aber nicht einzuschlafen.</Frame_CTherapyCouch.description>
 
 
 </LanguageData>
