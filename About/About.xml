@@ -14,13 +14,14 @@
 	</supportedVersions>
 	<modDependencies>
 		<li>
-		<packageId>UnlimitedHugs.HugsLib</packageId>
-		<displayName>HugsLib</displayName>
-		<steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
 	<loadAfter>
-		<li>UnlimitedHugs.HugsLib</li>
+		<li>brrainz.harmony</li>
 	</loadAfter>
 	<description>This mod allows you to let colonists do a "therapist" job. Build a therapy couch and a chair to create a therapy room.
 

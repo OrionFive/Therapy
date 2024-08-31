@@ -4,7 +4,7 @@
   <PropertyGroup>
     <RootNamespace>Therapy</RootNamespace>
     <AssemblyName>Therapy</AssemblyName>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <LangVersion>latest</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>..\..\1.5\Assemblies\</OutputPath>
@@ -29,9 +29,8 @@
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref" Version="*-*" ExcludeAssets="runtime" />
     <PackageReference Include="Krafs.Publicizer" Version="*" ExcludeAssets="runtime" />
-    <!-- Use Version="*-*" to get the latest beta! -->
     <PackageReference Include="Lib.Harmony" Version="*" ExcludeAssets="runtime" />
-    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="*" ExcludeAssets="runtime" />
+	<!-- Use Version="*-*" to get the latest beta! -->
   </ItemGroup>
   <ItemGroup>
 	<Publicize Include="Assembly-CSharp" />
