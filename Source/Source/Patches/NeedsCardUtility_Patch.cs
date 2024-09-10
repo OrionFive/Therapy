@@ -22,7 +22,7 @@ namespace Therapy.Patches
                 if (driver.CurrentTreatedMemory == null || driver.CurrentTreatedMemory.def != group.def) return;
                 TooltipHandler.TipRegion(rect, new TipSignal( "CounseledTooltip".Translate((driver.CurrentHealAmount / 10).ToStringWithSign()), 72916));
 
-                GUI.DrawTexture(new Rect(rect.x + 235 + 32, rect.y + 1, 8, 16), ModBaseTherapy.therapyIcon);
+                GUI.DrawTexture(new Rect(rect.x + 235 + 32, rect.y + 1, 8, 16), Mod_Therapy.therapyIcon);
             }
         }
 

@@ -1,15 +1,25 @@
-using HugsLib;
+using HarmonyLib;
 using UnityEngine;
 using Verse;
 
 namespace Therapy
 {
     [StaticConstructorOnStartup]
-    public class ModBaseTherapy : ModBase
+    public class Mod_Therapy : Mod
     {
-        public override string ModIdentifier => "Therapy";
+        public Mod_Therapy(ModContentPack content) : base(content)
+        {
+            Harmony harmony = new Harmony(this.Content.PackageIdPlayerFacing);
+            harmony.PatchAll();
+            PostLoad();
+        }
 
-        public override void MapLoaded(Map map)
+        public void PostLoad()
+        {
+            LongEventHandler.QueueLongEvent(() => MapLoaded(), "Loading Therapy Resources", false, null);
+        }
+
+        public static void MapLoaded()
         {
             symbolTherapist1 = ContentFinder<Texture2D>.Get("Things/Mote/SpeechSymbols/Therapist1");
             symbolTherapist2 = ContentFinder<Texture2D>.Get("Things/Mote/SpeechSymbols/Therapist2");

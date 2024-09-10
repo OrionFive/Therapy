@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
+using Therapy.Patches;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -132,11 +133,11 @@ public class JobDriver_Therapize : JobDriver
                 return;
             case 1:
                 TryCreateBubble(patient, pawn,
-                    Rand.Element(ModBaseTherapy.symbolPatient1, ModBaseTherapy.symbolPatient2));
+                    Rand.Element(Mod_Therapy.symbolPatient1, Mod_Therapy.symbolPatient2));
                 return;
             case 2:
                 TryCreateBubble(pawn, patient,
-                    Rand.Element(ModBaseTherapy.symbolTherapist1, ModBaseTherapy.symbolTherapist2));
+                    Rand.Element(Mod_Therapy.symbolTherapist1, Mod_Therapy.symbolTherapist2));
                 return;
         }
     }
