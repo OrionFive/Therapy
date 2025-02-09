@@ -6,7 +6,7 @@
     <label>therapy</label>
     <description>Build a therapy couch and chair and treat the wellbeing of your colonists.</description>
     <baseCost>400</baseCost>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Medieval</techLevel>
     <researchViewX>5.00</researchViewX>
     <researchViewY>0.50</researchViewY>
     <hiddenPrerequisites>
